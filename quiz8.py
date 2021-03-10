@@ -16,13 +16,20 @@ class LinkedList:
 
 
 def get_linked_list_sum(linked_list_1, linked_list_2):
-    node = linked_list_1.head
-    total = 0
-    while node is not None:
-        total += node.data
-        node = node.next
+    sum1 = _get_linked_list_sum(linked_list_1)
+    sum2 = _get_linked_list_sum(linked_list_2)
 
-    return total
+    return sum1 + sum2
+
+
+def _get_linked_list_sum(linked_list):
+    head = linked_list.head
+    linked_list_sum = 0
+    while head is not None:
+        linked_list_sum = linked_list_sum * 10 + head.data
+        head = head.next
+
+    return linked_list_sum
 
 
 linked_list_1 = LinkedList(6)
