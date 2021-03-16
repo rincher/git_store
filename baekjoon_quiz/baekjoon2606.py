@@ -21,3 +21,4 @@ def dfs_stack(adjacent_graph, start_node):
 
 
 dfs_stack(connected_computers, 1)
+print(len(visited)-1)
